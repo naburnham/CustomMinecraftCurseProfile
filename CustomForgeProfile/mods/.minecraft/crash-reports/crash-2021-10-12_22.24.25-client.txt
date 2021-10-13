@@ -1,0 +1,170 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 10/12/21 10:24 PM
+Description: Rendering overlay
+
+java.util.ConcurrentModificationException: null
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901) ~[?:1.8.0_51] {}
+	at java.util.ArrayList$Itr.next(ArrayList.java:851) ~[?:1.8.0_51] {}
+	at oreexcavation.shapes.ShapeRegistry.saveShapes(ShapeRegistry.java:116) ~[?:?] {re:classloading}
+	at oreexcavation.shapes.ShapeRegistry.loadShapes(ShapeRegistry.java:107) ~[?:?] {re:classloading}
+	at oreexcavation.handlers.ConfigHandler.loadJsonFiles(ConfigHandler.java:226) ~[?:?] {re:classloading}
+	at oreexcavation.handlers.ConfigHandler.onLoad(ConfigHandler.java:191) ~[?:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_ConfigHandler_onLoad_Loading.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:80) ~[eventbus-1.0.0-service.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258) ~[eventbus-1.0.0-service.jar:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.lambda$new$0(FMLModContainer.java:66) ~[?:28.2] {re:classloading}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer$$Lambda$2164/2141044241.accept(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.ModContainer.lambda$dispatchConfigEvent$5(ModContainer.java:147) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModContainer$$Lambda$4293/260350768.accept(Unknown Source) ~[?:?] {}
+	at java.util.Optional.ifPresent(Optional.java:159) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.ModContainer.dispatchConfigEvent(ModContainer.java:147) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ModConfig.fireEvent(ModConfig.java:89) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:101) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.lambda$loadConfigs$1(ConfigTracker.java:83) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker$$Lambda$4287/1505451279.accept(Unknown Source) ~[?:?] {}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:1.8.0_51] {}
+	at java.util.Collections$SynchronizedCollection.forEach(Collections.java:2062) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.config.ConfigTracker.loadConfigs(ConfigTracker.java:83) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModLoader.loadMods(ModLoader.java:152) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$startModLoading$6(ClientModLoader.java:125) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$4280/1231567024.run(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$2025/290945720.run(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.client.ClientModLoader.startModLoading(ClientModLoader.java:125) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$onreload$3(ClientModLoader.java:107) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$4278/1766862886.run(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$2025/290945720.run(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1618) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1610) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1689) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) ~[?:1.8.0_51] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
+	at java.util.ArrayList$Itr.next(ArrayList.java:851)
+	at oreexcavation.shapes.ShapeRegistry.saveShapes(ShapeRegistry.java:116)
+	at oreexcavation.shapes.ShapeRegistry.loadShapes(ShapeRegistry.java:107)
+	at oreexcavation.handlers.ConfigHandler.loadJsonFiles(ConfigHandler.java:226)
+	at oreexcavation.handlers.ConfigHandler.onLoad(ConfigHandler.java:191)
+	at net.minecraftforge.eventbus.ASMEventHandler_0_ConfigHandler_onLoad_Loading.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:80)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258)
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.lambda$new$0(FMLModContainer.java:66)
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer$$Lambda$2164/2141044241.accept(Unknown Source)
+	at net.minecraftforge.fml.ModContainer.lambda$dispatchConfigEvent$5(ModContainer.java:147)
+	at net.minecraftforge.fml.ModContainer$$Lambda$4293/260350768.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at net.minecraftforge.fml.ModContainer.dispatchConfigEvent(ModContainer.java:147)
+	at net.minecraftforge.fml.config.ModConfig.fireEvent(ModConfig.java:89)
+	at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:101)
+	at net.minecraftforge.fml.config.ConfigTracker.lambda$loadConfigs$1(ConfigTracker.java:83)
+	at net.minecraftforge.fml.config.ConfigTracker$$Lambda$4287/1505451279.accept(Unknown Source)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at java.util.Collections$SynchronizedCollection.forEach(Collections.java:2062)
+	at net.minecraftforge.fml.config.ConfigTracker.loadConfigs(ConfigTracker.java:83)
+	at net.minecraftforge.fml.ModLoader.loadMods(ModLoader.java:152)
+
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraft.client.gui.ResourceLoadProgressGui
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.func_195458_a(GameRenderer.java:544)
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:890)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(SourceFile:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$419/1306085976.call(Unknown Source)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.4
+	Minecraft Version ID: 1.14.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 4918804024 bytes (4690 MB) / 8589934592 bytes (8192 MB) up to 8589934592 bytes (8192 MB)
+	CPUs: 16
+	JVM Flags: 9 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx8G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 4.1.0+62+5bfa59b
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/eventbus-1.0.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-1.0.5-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar fml TRANSFORMATIONSERVICE 
+	FML: 28.2
+	Forge: net.minecraftforge:28.2.23
+	FML Language Providers: 
+		javafml@28.2
+		minecraft@1
+	Mod List: 
+		forge-1.14.4-28.2.23-client.jar Minecraft {minecraft@1.14.4 COMMON_SETUP}
+		industrial-foregoing-1.14.4-2.1.2-582ea8b.jar Industrial Foregoing {industrialforegoing@2.1.2 COMMON_SETUP}
+		MouseTweaks-2.13-mc1.14.4.jar Mouse Tweaks {mousetweaks@2.13 COMMON_SETUP}
+		titanium-1.14.4-2.2.10.jar Titanium {titanium@2.2.10 COMMON_SETUP}
+		Cucumber-1.14.4-2.0.6.jar Cucumber Library {cucumber@2.0.6 COMMON_SETUP}
+		ImmersiveEngineering-1.14.4-4.0.0-116.jar Immersive Engineering {immersiveengineering@1.14.4-4.0.0-116 COMMON_SETUP}
+		useful_railroads-1.14.4-1.2.4.19.jar Useful Railroads {usefulrailroads@1.2.4.19 COMMON_SETUP}
+		pamhc2trees-1.14.4-1.0.2.jar Pam's HarvestCraft 2 Fruit Trees {pamhc2trees@version COMMON_SETUP}
+		pamhc2crops-1.14.4-1.0.4.jar Pam's HarvestCraft 2 Crops {pamhc2crops@version COMMON_SETUP}
+		jei-1.14.4-6.0.0.27.jar Just Enough Items {jei@6.0.0.27 COMMON_SETUP}
+		pamhc2foodextended-1.14.4-1.0.0.jar Pam's HarvestCraft 2 Food Core {pamhc2foodextended@version COMMON_SETUP}
+		jeiintegration_1.14.4-2.0.0.jar JEI Integration {jeiintegration@2.0.0 COMMON_SETUP}
+		curios-FORGE-1.14.4-1.0.6.jar Curios API {curios@FORGE-1.14.4-1.0.6 COMMON_SETUP}
+		Botania+r1.11-379.jar Botania {botania@r1.11-379 COMMON_SETUP}
+		Patchouli-1.14.4-1.1-26.5.jar Patchouli {patchouli@1.14.4-1.1-27 COMMON_SETUP}
+		Neat 1.5-19.jar Neat {neat@1.5-19 COMMON_SETUP}
+		Waystones_1.14.4-5.1.1.jar Waystones {waystones@5.1.1 COMMON_SETUP}
+		pamhc2foodcore-1.14.4-1.1.0.jar Pam's HarvestCraft 2 Food Core {pamhc2foodcore@version COMMON_SETUP}
+		journeymap-1.14.4-5.7.0.jar Journeymap {journeymap@5.7.0 COMMON_SETUP}
+		OreExcavation-1.6.147.jar Ore Excavation {oreexcavation@NONE COMMON_SETUP}
+		Bookshelf-1.14.4-4.4.74.jar Bookshelf {bookshelf@4.4.74 COMMON_SETUP}
+		u_team_core-1.14.4-2.8.2.150.jar U Team Core {uteamcore@2.8.2.150 COMMON_SETUP}
+		DarkUtilities-1.14.4-2.0.13.jar Dark Utilities {darkutils@2.0.13 COMMON_SETUP}
+		Morpheus-1.14.4-4.2.44.jar Morpheus {morpheus@version COMMON_SETUP}
+		Hwyla-forge-1.10.6-B67_1.14.4.jar Waila {waila@version COMMON_SETUP}
+		WAWLA-1.14.4-2.9.1.jar WAWLA {wawla@2.9.1 COMMON_SETUP}
+		forge-1.14.4-28.2.23-universal.jar Forge {forge@28.2.23 COMMON_SETUP}
+		CodeChickenLib-1.14.4-3.2.8.374-universal.jar CodeChicken Lib {codechickenlib@3.2.8.374 COMMON_SETUP}
+		EnderStorage-1.14.4-2.4.8.144-universal.jar EnderStorage {enderstorage@2.4.8.144 COMMON_SETUP}
+		refinedstorage-1.7.3.jar Refined Storage {refinedstorage@1.7.3 COMMON_SETUP}
+		MysticalAgriculture-1.14.4-2.0.6.jar Mystical Agriculture {mysticalagriculture@2.0.6 COMMON_SETUP}
+	Launched Version: 1.14.4-forge-28.2.23
+	LWJGL: 3.2.2 build 10
+	OpenGL: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 472.12, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 16x AMD Ryzen 7 5800X 8-Core Processor 

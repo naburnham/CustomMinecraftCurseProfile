@@ -1,0 +1,174 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 10/12/21 10:16 PM
+Description: Rendering overlay
+
+java.lang.NullPointerException: Rendering overlay
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:770) ~[guava-21.0.jar:?] {}
+	at vazkii.botania.client.model.GunModel.<init>(GunModel.java:49) ~[?:r1.11-379] {re:classloading}
+	at vazkii.botania.client.core.handler.MiscellaneousIcons.onModelBake(MiscellaneousIcons.java:141) ~[?:r1.11-379] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_50_MiscellaneousIcons_onModelBake_ModelBakeEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:80) ~[eventbus-1.0.0-service.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258) ~[eventbus-1.0.0-service.jar:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:168) ~[?:28.2] {re:classloading}
+	at net.minecraftforge.fml.ModLoader.lambda$postEvent$30(ModLoader.java:243) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModLoader$$Lambda$2447/698715269.accept(Unknown Source) ~[?:?] {}
+	at java.util.HashMap.forEach(HashMap.java:1280) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.ModList.forEachModContainer(ModList.java:217) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModLoader.postEvent(ModLoader.java:243) ~[?:?] {re:classloading}
+	at net.minecraftforge.client.ForgeHooksClient.onModelBake(ForgeHooksClient.java:379) ~[?:?] {re:classloading}
+	at net.minecraft.client.renderer.model.ModelManager.func_212853_a_(ModelManager.java:62) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.model.ModelManager.func_212853_a_(ModelManager.java:17) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.ReloadListener.func_215269_a(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.client.resources.ReloadListener$$Lambda$4398/622723232.accept(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442) ~[?:1.8.0_51] {}
+	at net.minecraft.resources.AsyncReloader.func_219557_a(SourceFile:71) ~[?:?] {re:classloading}
+	at net.minecraft.resources.AsyncReloader$$Lambda$5275/1118536728.run(Unknown Source) ~[?:?] {}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213160_bf(SourceFile:103) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:861) [?:?] {re:classloading,pl:accesstransformer:B,xf:fml:codechickenlib:IItemRenderer,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:384) [?:?] {re:classloading,pl:accesstransformer:B,xf:fml:codechickenlib:IItemRenderer,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(SourceFile:155) [?:?] {re:classloading}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56) [forge-1.14.4-28.2.23.jar:28.2] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$419/1306085976.call(Unknown Source) [forge-1.14.4-28.2.23.jar:28.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-4.1.0.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-4.1.0.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-4.1.0.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-4.1.0.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-4.1.0.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:770)
+	at vazkii.botania.client.model.GunModel.<init>(GunModel.java:49)
+	at vazkii.botania.client.core.handler.MiscellaneousIcons.onModelBake(MiscellaneousIcons.java:141)
+	at net.minecraftforge.eventbus.ASMEventHandler_50_MiscellaneousIcons_onModelBake_ModelBakeEvent.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:80)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258)
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:168)
+	at net.minecraftforge.fml.ModLoader.lambda$postEvent$30(ModLoader.java:243)
+	at net.minecraftforge.fml.ModLoader$$Lambda$2447/698715269.accept(Unknown Source)
+	at java.util.HashMap.forEach(HashMap.java:1280)
+	at net.minecraftforge.fml.ModList.forEachModContainer(ModList.java:217)
+	at net.minecraftforge.fml.ModLoader.postEvent(ModLoader.java:243)
+	at net.minecraftforge.client.ForgeHooksClient.onModelBake(ForgeHooksClient.java:379)
+	at net.minecraft.client.renderer.model.ModelManager.func_212853_a_(ModelManager.java:62)
+	at net.minecraft.client.renderer.model.ModelManager.func_212853_a_(ModelManager.java:17)
+	at net.minecraft.client.resources.ReloadListener.func_215269_a(SourceFile:13)
+	at net.minecraft.client.resources.ReloadListener$$Lambda$4398/622723232.accept(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442)
+	at net.minecraft.resources.AsyncReloader.func_219557_a(SourceFile:71)
+	at net.minecraft.resources.AsyncReloader$$Lambda$5275/1118536728.run(Unknown Source)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144)
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118)
+
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraft.client.gui.ResourceLoadProgressGui
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.func_195458_a(GameRenderer.java:544)
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:890)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(SourceFile:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$419/1306085976.call(Unknown Source)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.4
+	Minecraft Version ID: 1.14.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 6163184032 bytes (5877 MB) / 8321499136 bytes (7936 MB) up to 8589934592 bytes (8192 MB)
+	CPUs: 16
+	JVM Flags: 9 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx8G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 4.1.0+62+5bfa59b
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/eventbus-1.0.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-1.0.5-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.14.4-28.2.23.jar fml TRANSFORMATIONSERVICE 
+	FML: 28.2
+	Forge: net.minecraftforge:28.2.23
+	FML Language Providers: 
+		javafml@28.2
+		minecraft@1
+	Mod List: 
+		forge-1.14.4-28.2.23-client.jar Minecraft {minecraft@1.14.4 DONE}
+		industrial-foregoing-1.14.4-2.1.2-582ea8b.jar Industrial Foregoing {industrialforegoing@2.1.2 DONE}
+		swingthroughgrass-1.14.4-1.3.2.jar SwingThroughGrass {swingthroughgrass@1.14.4-1.3.2 DONE}
+		MouseTweaks-2.13-mc1.14.4.jar Mouse Tweaks {mousetweaks@2.13 DONE}
+		titanium-1.14.4-2.2.10.jar Titanium {titanium@2.2.10 DONE}
+		Cucumber-1.14.4-2.0.6.jar Cucumber Library {cucumber@2.0.6 DONE}
+		ImmersiveEngineering-1.14.4-4.0.0-116.jar Immersive Engineering {immersiveengineering@1.14.4-4.0.0-116 DONE}
+		pamhc2trees-1.14.4-1.0.2.jar Pam's HarvestCraft 2 Fruit Trees {pamhc2trees@version DONE}
+		pamhc2crops-1.14.4-1.0.4.jar Pam's HarvestCraft 2 Crops {pamhc2crops@version DONE}
+		jei-1.14.4-6.0.0.27.jar Just Enough Items {jei@6.0.0.27 DONE}
+		TrackAPI-1.2.jar TrackAPI {trackapi@1.2 DONE}
+		pamhc2foodextended-1.14.4-1.0.0.jar Pam's HarvestCraft 2 Food Core {pamhc2foodextended@version DONE}
+		jeiintegration_1.14.4-2.0.0.jar JEI Integration {jeiintegration@2.0.0 DONE}
+		curios-FORGE-1.14.4-1.0.6.jar Curios API {curios@FORGE-1.14.4-1.0.6 DONE}
+		Botania+r1.11-379.jar Botania {botania@r1.11-379 DONE}
+		Patchouli-1.14.4-1.1-26.5.jar Patchouli {patchouli@1.14.4-1.1-27 DONE}
+		Neat 1.5-19.jar Neat {neat@1.5-19 DONE}
+		Waystones_1.14.4-5.1.1.jar Waystones {waystones@5.1.1 DONE}
+		pamhc2foodcore-1.14.4-1.1.0.jar Pam's HarvestCraft 2 Food Core {pamhc2foodcore@version DONE}
+		journeymap-1.14.4-5.7.0.jar Journeymap {journeymap@5.7.0 DONE}
+		Bookshelf-1.14.4-4.4.74.jar Bookshelf {bookshelf@4.4.74 DONE}
+		DarkUtilities-1.14.4-2.0.13.jar Dark Utilities {darkutils@2.0.13 DONE}
+		ImmersiveRailroading-1.14.4-forge-1.9.1.jar Immersive Railroading {immersiverailroading@1.14.4-forge-1.9.1 DONE}
+		Hwyla-forge-1.10.6-B67_1.14.4.jar Waila {waila@version DONE}
+		WAWLA-1.14.4-2.9.1.jar WAWLA {wawla@2.9.1 DONE}
+		forge-1.14.4-28.2.23-universal.jar Forge {forge@28.2.23 DONE}
+		CodeChickenLib-1.14.4-3.2.8.374-universal.jar CodeChicken Lib {codechickenlib@3.2.8.374 DONE}
+		EnderStorage-1.14.4-2.4.8.144-universal.jar EnderStorage {enderstorage@2.4.8.144 DONE}
+		refinedstorage-1.7.3.jar Refined Storage {refinedstorage@1.7.3 DONE}
+		MysticalAgriculture-1.14.4-2.0.6.jar Mystical Agriculture {mysticalagriculture@2.0.6 DONE}
+		UniversalModCore-1.14.4-forge-1.1.3.jar Universal Mod Core {universalmodcore@1.1.3 DONE}
+	Launched Version: 1.14.4-forge-28.2.23
+	LWJGL: 3.2.2 build 10
+	OpenGL: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 472.12, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 16x AMD Ryzen 7 5800X 8-Core Processor 
