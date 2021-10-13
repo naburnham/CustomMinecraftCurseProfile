@@ -1,0 +1,28 @@
+[07:44:05] [main/INFO]: ModLauncher running: args [--username, Nate7191, --version, forge-28.2.0, --gameDir, C:\Users\nabur\curseforge\minecraft\Instances\CustomForgeModpack, --assetsDir, C:\Users\nabur\curseforge\minecraft\Install\assets, --assetIndex, 1.14, --uuid, 2ffcabdc082e4f2aae59032f7e9b3a14, --accessToken, ????????, --userType, msa, --versionType, release, --width, 1024, --height, 768, --launchTarget, fmlclient, --fml.forgeVersion, 28.2.0, --fml.mcVersion, 1.14.4, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20190829.143755]
+[07:44:05] [main/INFO]: ModLauncher 4.1.0+62+5bfa59b starting: java version 1.8.0_51 by Oracle Corporation
+[07:44:05] [main/INFO]: Added Lets Encrypt root certificates as additional trust
+[07:44:06] [main/INFO]: Launching target 'fmlclient' with arguments [--version, forge-28.2.0, --gameDir, C:\Users\nabur\curseforge\minecraft\Instances\CustomForgeModpack, --assetsDir, C:\Users\nabur\curseforge\minecraft\Install\assets, --uuid, 2ffcabdc082e4f2aae59032f7e9b3a14, --username, Nate7191, --assetIndex, 1.14, --accessToken, ????????, --userType, msa, --versionType, release, --width, 1024, --height, 768]
+[07:44:07] [Client thread/INFO]: Setting user: Nate7191
+[07:44:11] [Client thread/INFO]: LWJGL Version: 3.2.2 build 10
+[07:44:13] [modloading-worker-9/INFO]: Forge mod loading, version 28.2.0, for MC 1.14.4 with MCP 20190829.143755
+[07:44:13] [modloading-worker-9/INFO]: MinecraftForge v28.2.0 Initialized
+[07:44:14] [Client thread/INFO]: Narrator library for x64 successfully loaded
+[07:44:14] [Forge Version Check/INFO]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[07:44:14] [Forge Version Check/INFO]: [forge] Found status: UP_TO_DATE Current: 28.2.0 Target: null
+[07:44:16] [Client thread/INFO]: OpenAL initialized.
+[07:44:16] [Client thread/INFO]: Sound engine started
+[07:44:16] [Client thread/INFO]: Created: 512x512 textures-atlas
+[07:44:16] [Client thread/INFO]: Created: 256x256 textures/particle-atlas
+[07:44:16] [Client thread/INFO]: Created: 256x256 textures/painting-atlas
+[07:44:16] [Client thread/INFO]: Created: 128x128 textures/mob_effect-atlas
+[07:44:24] [Client thread/INFO]: Connecting to 73.68.159.92, 25565
+[07:44:25] [Client thread/INFO]: Injecting existing registry data into this CLIENT instance
+[07:44:25] [Netty Client IO #1/WARN]: Configuration file SimpleCommentedConfig:{server=SimpleCommentedConfig:{dimensionUnloadQueueDelay=0, zombieBaseSummonChance=0.1, zombieBabyChance=0.05, removeErroringEntities=false, fullBoundingBoxLadders=false, fixAdvancementLoading=true, logCascadingWorldGeneration=true, treatEmptyTagsAsAir=false, clumpingThreshold=64, removeErroringTileEntities=false, fixVanillaCascading=false}} is not correct. Correcting
+[07:44:25] [Netty Client IO #1/WARN]: Incorrect key server.fixAdvancementLoading was corrected from true to null
+[07:44:25] [Netty Client IO #1/FATAL]: Forge config just got changed on the file system!
+[07:44:25] [Netty Client IO #1/INFO]: Connected to a modded server.
+[07:44:25] [Client thread/ERROR]: Received empty payload on channel fml:handshake
+[07:44:26] [Netty Client IO #1/ERROR]: Could not deserialize minecraft:
+[07:44:26] [Netty Client IO #1/ERROR]: Could not deserialize minecraft:
+[07:44:26] [Client thread/INFO]: Loaded 0 advancements
+[07:44:53] [Client thread/INFO]: Stopping!
