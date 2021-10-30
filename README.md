@@ -1,9 +1,9 @@
 # CustomMinecraftProfile
 
 ## Version Notes
-Minecraft Version: 1.16.5
+###Minecraft Version: 1.16.5
 
-Forge Version: 36.2.8
+###Forge Version: 36.2.4
 
 ## Installation Steps through CurseForge Launcher
 
@@ -11,7 +11,7 @@ Forge Version: 36.2.8
 
 ![alttext](images/create_custom_profile.PNG)
 
-2. Enter a profile name, ensure Minecraft version is set to 1.16.5 and Forge version is set to 36.2.8
+2. Enter a profile name, ensure Minecraft version is set to 1.16.5 and Forge version is set to 36.2.4
 
 ![alttext](images/configure_settings.PNG)
 
